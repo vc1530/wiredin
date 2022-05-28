@@ -1,0 +1,116 @@
+#quiz { 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+#quiz div.bs-searchbox { 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+#quiz .bootstrap-select  { 
+  background-color: var(--rose-white); 
+  width: 250px; 
+}
+
+#quiz .dropdown-menu { 
+  height: 100px; 
+  width: 250px; 
+  overflow: scroll; 
+}
+
+#quiz .dropdown-item { 
+  height: 40px; 
+}
+
+#quiz .dropdown-item .text { 
+  font-size: 16px; 
+  height: 20px; 
+}
+
+#quiz p { 
+  width: 400px; 
+  text-align: center; 
+}
+
+#quizCarousel { 
+  width: 400px; 
+  background-color: var(--rose-white);
+  border-radius: 20px; 
+}
+
+.question {
+  height: 400px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  background-color: var(--rose-white); 
+  padding: 20px; 
+  border-radius: 20px; 
+  box-shadow:1px 1px 1px 1px var(--gray);
+  border-left-style: var(--dark-gray); 
+  border-right-style: var(--dark-gray);
+}
+
+.question span { 
+  font-size: 20px; 
+  text-align: center; 
+  margin-bottom: 10px; 
+}
+
+.question input:not(.form-check-input) { 
+  border-style: solid; 
+  border-color: var(--gray); 
+  border-radius: 5px; 
+  height: 30px; 
+  margin: 10px; 
+  width: 250px; 
+}
+
+.dropdown-toggle { 
+  margin: 5px; 
+  border-style: none; 
+  width: 100px; 
+  border-radius: 10px; 
+  background-color: var(--accent-color); 
+  color: white; 
+}
+
+#quiz .carousel-control-prev, 
+#quiz .carousel-control-next{
+  margin-top:320px;
+  width: 50px; 
+  height:50px;
+  border-radius: 50%;
+  background-color:var(--accent-color);
+}
+
+#quiz .carousel-control-prev{
+  margin-left:20px;
+}
+
+#quiz .carousel-control-next{
+  margin-right:20px;
+}
+
+#quiz .carousel-indicators [data-bs-target] { 
+  background-color: var(--accent-color); 
+}
+
+#quizSubmitButton:hover { 
+  background-color: #59498c; 
+}
+
+#quizSubmitButton:focus, #quizSubmitButton:disabled { 
+  background-color: var(--dark-gray); 
+}
+
+.Toastify__close-button{
+  width:10px;
+  height:10px;
+  background-color: var(--rose-white);
+}

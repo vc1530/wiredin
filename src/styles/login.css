@@ -1,0 +1,29 @@
+#login { 
+  margin-top: 150px; 
+  margin-bottom: 50px; 
+  -webkit-animation: slideRight 1s forwards;
+  -moz-animation: slideRight 1s forwards;
+  animation: slideRight 1s forwards;
+}
+
+#login-container { 
+  display: flex; 
+  flex-direction: column; 
+  background-color: var(--rose-white); 
+  padding: 40px; 
+  border-radius: 15px; 
+  box-shadow: 1px 1px 1px 1px var(--gray); 
+  width: 500px; 
+}
+
+#login-container span { 
+  margin-bottom: 20px;
+  display:block;
+  margin:0px auto;
+  margin-bottom: 20px;
+}
+
+
+#login-form button:hover { 
+  background-color: #59498c; 
+}
