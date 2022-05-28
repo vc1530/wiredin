@@ -80,7 +80,6 @@ export default function Quiz() {
     "Web Development", 
   ]  
   
-  
   var checkBoxState = {
     checkbox: "",
     errorMsg: {
@@ -89,7 +88,6 @@ export default function Quiz() {
     selectedCheckBox: 0,
     formValid: false
   };
-
 
   var updateCheckbox = ({ name, checked }) => {
     console.log("bruh")
