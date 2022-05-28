@@ -1,0 +1,29 @@
+#home { 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  font-size: 20px; 
+  height: 500px; 
+  width: 500px;
+  -webkit-animation: slideUp 1s forwards;
+  -moz-animation: slideUp 1s forwards;
+  animation: slideUp 1s forwards;
+}
+
+#home-btns button { 
+  font-size: 16px; 
+  font-family: "HK Grotesk";
+  margin: 10px; 
+  border-radius: 15px; 
+  border-style: none; 
+  height: 60px; 
+  width: 120px; 
+  background-color: var(--accent-color); 
+  color: white; 
+}
+
+#home-btns button:hover { 
+  background-color: #59498c; 
+}

@@ -1,0 +1,73 @@
+#profilecard { 
+  margin-top: 50px; 
+  margin-bottom: 50px; 
+  background-color: var(--rose-white); 
+  display: flex; 
+  flex-direction: row; 
+  border-radius: 20px; 
+  box-shadow:1px 1px 1px 1px var(--gray);
+  border-left-style: solid var(--dark-gray); 
+  border-right-style: solid var(--dark-gray); 
+}
+
+#profilecard-sidebar { 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  border-right-style: solid; 
+  border-color: var(--gray); 
+  padding: 20px; 
+}
+
+#profilecard-pic { 
+  width: 200px; 
+  height: 200px; 
+  margin: 20px; 
+  border-radius: 50%; 
+}
+
+div.info { 
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+}
+
+span.label { 
+  font-weight: bold; 
+  width: 70px; 
+  text-align: left; 
+  margin: 10px; 
+}
+
+span.ans { 
+  width: 165px; 
+}
+
+#profilecard-main { 
+  padding: 40px; 
+  width: 400px; 
+}
+
+#profilecard-main h2, h3 { 
+  color: black; 
+  border-bottom-style: solid; 
+  border-color: var(--gray); 
+  margin-top: 10px;
+  margin-bottom: 10px; 
+}
+
+#experience { 
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-between; 
+}
+
+#experience div { 
+  margin-bottom: 10px; 
+  display: flex; 
+  flex-direction: column; 
+}
+
+#experience span.workplace { 
+  font-weight: bold; 
+}

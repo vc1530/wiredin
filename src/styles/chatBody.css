@@ -1,0 +1,49 @@
+.chatBody { 
+  width: 500px; 
+}
+
+.chatBody header { 
+  height: 80px; 
+  font-size: 24px;  
+  display: flex; 
+  align-items: center; 
+  justify-content: left; 
+  background-color: var(--accent-color); 
+  color: white; 
+  border-bottom-style: solid; 
+  box-shadow:1px 1px 1px 1px var(--gray);
+}
+
+.chatBodyPic { 
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%; 
+  margin: 15px; 
+}
+
+.chatMain { 
+  padding: 30px 10px 30px 10px; 
+}
+
+.sender { 
+  width: 300px; 
+  justify-self: right; 
+}
+
+.body { 
+  width: fit-content; 
+  max-width: 350px; 
+  overflow: wrap; 
+  padding: 10px; 
+}
+
+.myMessage .body { 
+  background-color: var(--hover-color); 
+  color: white; 
+  border-radius: 20px 20px 5px 20px; 
+}
+
+.theirMessage .body { 
+  background-color: var(--gray); 
+  border-radius: 20px 20px 20px 5px;
+}

@@ -1,0 +1,23 @@
+#feedCarousel { 
+  margin-top: 100px; 
+  display: flex; 
+  flex-direction: row; 
+  width: 900px;
+  padding-left:80px;
+  padding-right:80px;
+  -webkit-animation: slideLeft 1s forwards;
+  -moz-animation: slideLeft 1s forwards;
+  animation: slideLeft 1s forwards;
+}
+
+.carousel-control-prev {
+  margin-top: 50px;
+  height: 625px;
+  width: 90px;
+}
+
+.carousel-control-next {
+  margin-top: 50px;
+  height: 625px;
+  width: 90px;
+}
