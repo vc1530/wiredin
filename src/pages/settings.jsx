@@ -133,7 +133,7 @@ export default function Settings(){
               Please enter a valid password.
             </div>
           </div>
-            <div className = "mb-3 question">
+            <div className = "mb-3 question quiz">
               <span>Where are you currently located?</span>
               <select className="selectpicker" data-live-search="true">
                 {states.map(state => 
