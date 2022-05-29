@@ -11,7 +11,7 @@ jwtOptions.secretOrKey = process.env.JWT_SECRET
 const jwtStrategy = new JwtStrategy(jwtOptions, async function (jwt_payload, next) {
   console.log("hey!") 
   console.log("JWT payload received", jwt_payload) 
-  const users = require("./user_data.js")
+  const users = require("./database/user_data.js")
   const user = users[_.findIndex(users, { id: jwt_payload.id })] 
   if (user) {
     next(null, user)

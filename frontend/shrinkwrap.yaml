@@ -8,6 +8,7 @@ dependencies:
   wouter: 2.7.5
 devDependencies:
   vite: 2.7.13
+  process: 0.11.10
 packages:
   /@ampproject/remapping/2.2.0:
     dependencies:

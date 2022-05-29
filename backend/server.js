@@ -1,36 +1,17 @@
-const fs = require("fs");
-const path = require("path");
+#!/usr/bin/env node
 
-const fastify = require("fastify")({
-  logger: false
-});
+const server = require('./app')
 
-// fastify-formbody lets us parse incoming forms
-fastify.register(require("fastify-formbody"));
+const port = 4000
 
-// point-of-view is a templating manager for fastify
-fastify.register(require("point-of-view"), {
-  engine: {
-    handlebars: require("handlebars")
-  }
-});
+const listener = server.listen(port, function () {
+  console.log(`Server running on port: ${port}`)
+})
 
-// Load and parse SEO data
-const seo = require("../src/seo.json");
-if (seo.url === "glitch-default") {
-  seo.url = `https://wiredin.glitch.me`;
+const close = () => {
+  listener.close()
 }
 
-fastify.get("/", async (request, reply) => {
-  let params = request.query.raw ? {} : { seo: seo };
-  reply.send('hello'); 
-});
-
-fastify.listen(process.env.PORT, '0.0.0.0', function(err, address) {
-  if (err) {
-    fastify.log.error(err);
-    process.exit(1);
-  }
-  console.log(`Your app is listening on ${address}`);
-  fastify.log.info(`server listening on ${address}`);
-});
+module.exports = {
+  close: close,
+}
