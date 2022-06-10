@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Link } from "wouter";
 import "../styles/styles.css";
 import "../styles/profilecard.css"; 
 

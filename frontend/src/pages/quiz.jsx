@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Link } from "wouter";
 import "../styles/quiz.css"
 import "../styles/styles.css";
 import { ToastContainer, toast } from 'react-toastify';

@@ -1,10 +1,6 @@
 import * as React from "react";
-import { animated } from "react-spring";
-import { useWiggle } from "../hooks/wiggle";
-import { Link } from "wouter";
 import "../styles/styles.css";
 import "../styles/signup.css"; 
-import { Navigate } from 'react-dom';
 
 export default function SignUp() {
   

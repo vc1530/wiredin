@@ -3,4 +3,5 @@ web_modules
 .firebase
 .firebaserc
 .glitchdotcom.json
+.env 
 build

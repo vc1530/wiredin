@@ -48,5 +48,5 @@
 
 .cardBody { 
   height: 60px; 
-  overflow: ellipsis; 
+  overflow: hidden; 
 }

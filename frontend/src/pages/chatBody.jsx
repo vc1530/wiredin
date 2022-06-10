@@ -9,6 +9,14 @@ export default function ChatBody(props) {
   React.useEffect(() => { 
     setChat(props.chat)
   }, [props.chat])
+
+  let prevSender 
+
+  const getSender = (sender) => { 
+    if (sender === prevSender) return "" 
+    prevSender = sender 
+    return (<div className = "sender">{sender}</div>)
+  }
   
   return ( 
     <div className = "chatBody">
@@ -19,7 +27,7 @@ export default function ChatBody(props) {
       <div className = "chatMain">
         {chat.messages.map(message => (
           <div className = {message.sender === "Me" ? `message myMessage` : `message theirMessage`}>
-            <div className = "sender">{message.sender}</div>
+            {getSender(message.sender)} 
             <div className = "body">{message.body}</div>
           </div>
         ))}

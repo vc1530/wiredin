@@ -10,7 +10,6 @@
   justify-content: left; 
   background-color: var(--accent-color); 
   color: white; 
-  border-bottom-style: solid; 
   box-shadow:1px 1px 1px 1px var(--gray);
 }
 
@@ -22,17 +21,24 @@
 }
 
 .chatMain { 
-  padding: 30px 10px 30px 10px; 
+  display: flex; 
+  flex-direction: column; 
+  gap: .5rem; 
+  padding: 20px; 
 }
 
-.sender { 
-  width: 300px; 
-  justify-self: right; 
+.message { 
+  display: flex; 
+  flex-direction: column; 
+}
+
+.myMessage { 
+  align-items:flex-end;
 }
 
 .body { 
   width: fit-content; 
-  max-width: 350px; 
+  max-width: 300px; 
   overflow: wrap; 
   padding: 10px; 
 }
