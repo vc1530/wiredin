@@ -4,6 +4,7 @@ import ChatBody from "./chatBody"
 import chats from "../data/chats.json"
 import "../styles/chat.css"
 import "../styles/styles.css"
+import { BiEdit } from "react-icons/bi"
 
 export default function Chat() {
   
@@ -31,7 +32,11 @@ export default function Chat() {
       <Header /> 
       <div id = "chat">
         <div id = "chatSidebar">
-          <header>Chats </header>
+          <header>
+            <div className="placeholder"></div>
+            <div>Chats</div>
+            <BiEdit size = "28px" /> 
+          </header>
           {chats.map(chat => (
             <div id = {`${chat.name}chat`} className = "chatCard" onClick = {() => getCurrentChat(chat)}>
               <img className = "chatPic" src = {chat.profile_pic} alt = "bart" />
@@ -45,7 +50,7 @@ export default function Chat() {
         </div>
         {currentChat.messages ? 
           (<ChatBody chat = {currentChat} />) : 
-          (<p>Select a chat to get started.</p>)
+          (<ChatBody />)
         } 
       </div>
     </div>

@@ -4,6 +4,7 @@ import "../styles/styles.css";
 import "../styles/header.css"; 
 
 export default function Header () { 
+
   return ( 
     <header className = "header">
       <img 
@@ -14,7 +15,7 @@ export default function Header () {
         onClick = {()=>window.location.href="/feed"}
       />
       <nav>
-        <Link className="navbutton" to="/">Home</Link>
+        <Link className="navbutton" to="/feed">Home</Link>
         <Link className="navbutton" to="/chat">Chats</Link>
         <Link className="navbutton" to="/settings">Settings</Link>
       </nav>

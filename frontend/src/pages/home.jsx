@@ -1,12 +1,13 @@
 import * as React from "react";
 import "../styles/styles.css";
 import "../styles/home.css"; 
+import logo from "../images/logo.svg"
 
 export default function Home() {
   return (
     <div id = "home">
       <img 
-        src = "https://cdn.glitch.global/eb2b61f7-9a91-4dc7-bc5c-1551f792876d/logo.svg?v=1653683560654"
+        src = {logo}
         alt = "logo"
       /> 
       <p>

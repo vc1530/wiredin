@@ -1,9 +1,11 @@
 #login { 
   margin-top: 150px; 
   margin-bottom: 50px; 
-  -webkit-animation: slideRight 1s forwards;
-  -moz-animation: slideRight 1s forwards;
-  animation: slideRight 1s forwards;
+  animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
 }
 
 #login-container { 
@@ -24,6 +26,6 @@
 }
 
 
-#login-form button:hover { 
-  background-color: #59498c; 
+#login-form button:hover, #login-form button:focus { 
+  background-color: var(--hover-color); 
 }

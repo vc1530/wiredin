@@ -3,6 +3,7 @@ import "../styles/styles.css";
 import "../styles/login.css"; 
 import axios from "axios"; 
 import { Navigate } from "react-router-dom"
+import logo from "../images/logo.svg"
 
 export default function LogIn() {
 
@@ -10,6 +11,7 @@ export default function LogIn() {
   const [password, setPassword] = React.useState("")
 
   const [response, setResponse] = React.useState({}) 
+  const [errorMessage, setErrorMessage] = React.useState("") 
 
   React.useEffect(() => { 
     if (response.success && response.token) { 
@@ -20,7 +22,6 @@ export default function LogIn() {
   
   const logIn = async e => {
     e.preventDefault()
-
     try { 
       const loginData = {
         email: email, 
@@ -31,8 +32,13 @@ export default function LogIn() {
         loginData
       )
       setResponse(response.data)
-
     } catch (err) { 
+      if (err.response?.status === 401) 
+        setErrorMessage("Please enter a username and password.")
+      if (err.response?.status === 404) 
+        setErrorMessage("A user with this email address does not exist.") 
+      if (err.response?.status === 403) 
+        setErrorMessage("Incorrect password. Please double check your password.") 
       console.log(err.response) 
       console.log( `Login failed`)
     }
@@ -45,7 +51,7 @@ export default function LogIn() {
         <div id = "login-container">
           <img 
             height = "75px"
-            src = "https://cdn.glitch.global/eb2b61f7-9a91-4dc7-bc5c-1551f792876d/logo.svg?v=1653683560654"
+            src = {logo} 
           /> 
           <span> 
             Inspiring a new generation of female tech leaders 🙌💕
@@ -60,7 +66,10 @@ export default function LogIn() {
                 name = "email" 
                 type = "text" 
                 value = {email}
-                onChange = {e => setEmail(e.target.value)}
+                onChange = {e => { 
+                  setEmail(e.target.value)
+                  setErrorMessage("")
+                }}
                 required
               />
             </div>
@@ -70,14 +79,18 @@ export default function LogIn() {
                 className="form-control"
                 id="passwordInput"
                 name = "password" 
-                type = "text" 
+                type = "password" 
                 value = {password}
-                onChange = {e => setPassword(e.target.value)}
+                onChange = {e => { 
+                  setPassword(e.target.value)
+                  setErrorMessage("") 
+                }}
                 required
               />
             </div>
             <button type = "submit" className="btn btn-primary">Login</button>
           </form>
+          {errorMessage ? (<div className="error">{errorMessage}</div>) : ""}
         </div>
       </div>
     );

@@ -1,9 +1,11 @@
 #signup { 
   margin-top: 100px; 
   margin-bottom: 50px; 
-  -webkit-animation: slideRight 1s forwards;
-  -moz-animation: slideRight 1s forwards;
-  animation: slideRight 1s forwards;
+  animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
 }
 
 #signup-container { 

@@ -1,6 +1,7 @@
 import * as React from "react";
 import "../styles/styles.css";
 import "../styles/signup.css"; 
+import logo from "../images/logo.svg" 
 
 export default function SignUp() {
   
@@ -20,7 +21,7 @@ export default function SignUp() {
       <div id = "signup-container">
         <img 
           height = "75px"
-          src = "https://cdn.glitch.global/eb2b61f7-9a91-4dc7-bc5c-1551f792876d/logo.svg?v=1653683560654"
+          src = {logo} 
         /> 
         <span> 
           Inspiring a new generation of female tech leaders 🙌💕
