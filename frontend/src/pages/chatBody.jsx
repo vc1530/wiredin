@@ -34,11 +34,11 @@ export default function ChatBody(props) {
             </div>
           ))}
         </div>
-        <div> 
+        {/* <div> 
           <textarea>
             {newMessage} 
           </textarea>
-        </div>
+        </div> */}
       </div>
     ); 
   } 
